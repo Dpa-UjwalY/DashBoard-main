@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "National Highway Authority",
+      "price": 275.99,
+      "currency": "INR",
+      "image": "images/01.jpg",
+      "url": "https://m.media-amazon.com/images/I/614jPzueegL._SL1500_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Relience Jio",
+      "price": 1599.99,
+      "currency": "INR",
+      "image": "images/02.jpg",
+      "url": "https://m.media-amazon.com/images/I/51-9+QbUWGL._SL1500_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Tata Power",
+      "price": 659.99,
+      "currency": "INR",
+      "image": "images/04.jpg",
+      "url": "https://m.media-amazon.com/images/I/51nKw8Bv9+L._SL1500_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "ICICI",
+      "price": 269.99,
+      "currency": "INR",
+      "image": "images/06.jpg",
+      "url": "https://m.media-amazon.com/images/I/61hzuoXwjqL._SL1500_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Paytm",
+      "price": 14999.99,
+      "currency": "INR",
+      "image": "images/05.jpg",
+      "url": "https://m.media-amazon.com/images/I/81HQTxWTQ7L._SL1500_.jpg"
+    },
+    {
+      "id": 6,
+      "name": "MHRDC",
+      "price": 45299.99,
+      "currency": "INR",
+      "image": "images/03.jpg",
+      "url": "https://m.media-amazon.com/images/I/71EUdePy6ML._SL1500_.jpg"
+    }
+  ]

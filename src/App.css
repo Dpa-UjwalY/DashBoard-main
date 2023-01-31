@@ -1,38 +1,100 @@
 .App {
-  text-align: center;
+  background: linear-gradient(white, white);
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 12rem auto 13rem;
+  color: rgb(0, 0, 0);
+  font-family: "Libre Baskerville", serif;
+  overflow: visible;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar {
+  height: 100vh;
+  width: 100%;
+-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+  background: linear-gradient(#212121,#212121);
+  overflow: hidden;
+  color: rgb(122, 114, 103);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar nav:not(:nth-child(1)) a{
+  display: block;
+  color: #ffffff;
+  padding: 1rem 5px;
+  text-decoration: none;
+}
+
+.sidebar nav:not(:nth-child(1)) a.active{
+  border-radius: 0px 30px 30px 0px;
+  background: white;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.635);
+-moz-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.635);
+box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.635);
+}
+
+.sidebar nav:not(:nth-child(1)) a:hover{
+  border-radius: 0px 30px 30px 0px;
+  background: white;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.635);
+-moz-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.635);
+box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.635);
+}
+
+
+
+.image {
+  width: 100%;
+}
+
+.btn1 {
+  border-radius: 20mm;
+  border-color: rgb(34, 37, 48);
+  background: linear-gradient(rgb(121, 123, 133), rgb(193, 198, 207));
+  padding: 0.5rem;
+}
+
+.btn1:hover {
+  border-color: rgba(71, 87, 115, 0.977);
+  background: rgba(71, 87, 115, 0.977);
+}
+.ito{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+.ito-align {
+  margin: 2rem;
+  
+}
+.ito-item {
+  cursor: pointer;
+  border-radius: 25px ;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.428);
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.302);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span{
+  background: #000;
 }
+
+.right-side-bar{
+  background: linear-gradient(#222222,#333333);
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.68);
+}
+
+ 
+
