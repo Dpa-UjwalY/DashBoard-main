@@ -4,11 +4,21 @@ import { Middle } from "./components/Middle";
 import { SideBar } from "./components/SideBar";
 
 function App() {
+
+  document.body.classList.add("no-scroll");
+
   return (
       <div className="App">
-        <SideBar/>
-        <Middle  />
-        <div className="right-side-bar" ></div>
+        <div className="sidebar-sticky">
+          <SideBar/>
+        </div>
+        <div className="all-components row m-0">
+          <div className="middle-components col-md-10" >
+            <Middle  />
+          </div>
+          <div className="right-side-bar col-md-2">
+          </div>
+        </div>
       </div>
   );
 }

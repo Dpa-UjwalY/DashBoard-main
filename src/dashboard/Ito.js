@@ -11,7 +11,7 @@ export const Ito = () => {
       <h2>Initail Token Offering</h2>
     </div>
     <div className='ito' >
-      <Row lg={1} xs={1} className="g-3 ito-align">
+      <Row lg={3} md={2} xs={1} className="g-3 ito-align">
         {ito.map((items) => (
           <Col key={items.id}>
             <ItoItem {...items} />

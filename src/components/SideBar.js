@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { MdOutlineLogout } from "react-icons/md";
 import { sidebarData } from "../data/sidebarData.js";
 import "../App.css";
@@ -17,15 +17,12 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 export const SideBar = () => {
   const [select, setSelect] = useState(0);
   const [logout, setLogout] = useState(false);
-  const renderTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      Simple tooltip
-    </Tooltip>
-  );
+  
 
   return (
     <div
       style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
+      className="sidebar-shadow"
     >
       <CDBSidebar
         textColor="#000000"
@@ -41,28 +38,26 @@ export const SideBar = () => {
             />
           </NavLink>
         </CDBSidebarHeader>
-
         <CDBSidebarContent className="sidebar-content sidebar">
           <CDBSidebarMenu>
             {sidebarData.map((item, index) => {
               return (
+                <OverlayTrigger
+                  placement="right"
+                  delay={{ show: 250, hide: 400 }}
+                  overlay={<Tooltip id="button-tooltip">{item.name}</Tooltip>}
+                >
                 <NavLink
                   to={`/${item.address}`}
                   key={item.id}
                   className={select === index ? "active" : ""}
                   onClick={() => setSelect(index)}
                 >
-                  <OverlayTrigger
-      placement="right"
-      delay={{ show: 250, hide: 400 }}
-      overlay={<Tooltip id="button-tooltip">
-      {item.name}
-    </Tooltip>}
-    >
-                  <CDBSidebarMenuItem icon={item.tag}>
-                    <h6>{item.name}</h6>
-                  </CDBSidebarMenuItem></OverlayTrigger>
+                    <CDBSidebarMenuItem icon={item.tag}>
+                      <h6>{item.name}</h6>
+                    </CDBSidebarMenuItem>
                 </NavLink>
+                  </OverlayTrigger>
               );
             })}
           </CDBSidebarMenu>
@@ -73,16 +68,25 @@ export const SideBar = () => {
           className="sidebar-content sidebar"
         >
           <CDBSidebarMenu>
-          <div style={{
-              padding: '20px 5px',
-            }}><NavLink
-              to="/logout"
-              onClick={() => setLogout(true)}
-              className={logout ? "logout active" : ""}
+            <OverlayTrigger
+                placement="right"
+                delay={{ show: 250, hide: 400 }}
+                overlay={<Tooltip id="button-tooltip">Logout</Tooltip>}
+              >
+            <div
+              style={{
+                padding: "20px 5px",
+              }}
             >
-                <MdOutlineLogout /> LOGOUT
-            </NavLink>
+              <NavLink
+                to="/logout"
+                onClick={() => setLogout(true)}
+                className={logout ? "logout active" : ""}
+              >
+                <MdOutlineLogout />
+              </NavLink>
             </div>
+              </OverlayTrigger>
           </CDBSidebarMenu>
         </CDBSidebarFooter>
       </CDBSidebar>
